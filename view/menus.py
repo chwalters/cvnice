@@ -42,22 +42,6 @@ def top_menu(username: str, app_model: AppModel) -> None:
                 with ui.item_section().props("item-label"):
                     ui.label(text="Templates")
             ui.separator()
-            # with ui.menu_item(on_click=None):
-            #     with ui.item_section().props('avatar'):
-            #         ui.icon(name="keyboard_double_arrow_right")
-            #     with ui.item_section().props("item-label"):
-            #         ui.label(text="Import...")
-            # with ui.menu_item(on_click=None):
-            #     with ui.item_section().props('avatar'):
-            #         ui.icon(name="keyboard_double_arrow_left")
-            #     with ui.item_section().props("item-label"):
-            #         ui.label(text="Export...")
-            # with ui.menu_item(on_click=None):
-            #     with ui.item_section().props('avatar'):
-            #         ui.icon(name="save")
-            #     with ui.item_section().props("item-label"):
-            #         ui.label(text="Save")
-            # ui.separator()
             with ui.menu_item(on_click=lambda: ui.navigate.to("/settings")):
                 with ui.item_section().props('avatar'):
                     ui.icon(name="settings")
