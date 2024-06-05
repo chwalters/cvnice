@@ -56,48 +56,6 @@ async def reset_password_content(request: Request, app_model: AppModel, position
             except Exception as e:
                 ui.notify(str(e))
 
-    # user_id = app.storage.user.get("user_id")
-    # supabase = get_client(app.storage.user.get("username"))
-    #
-    # response = supabase.table('personae').select('cv_resume').eq('owner', user_id).execute()
-    # new_cv = None
-    # if response is not None:
-    #     if len(response.data) > 0:
-    #         app_model.personae[0].cv_resume = TypeAdapter(resume_cv.Resume).validate_json(
-    #             response.data[0]['cv_resume'])
-    #         new_cv = app_model.personae[0].cv_resume
-    # if new_cv is None:
-    #     app_model.personae[0].cv_resume = resume_cv.Resume(
-    #         field_schema="https://raw.githubusercontent.com/reorx/jsoncv/master/schema/jsoncv.schema.json",
-    #         basics=Basics(
-    #             profiles=[],
-    #             location=Location()
-    #         ),
-    #         work=[],
-    #         volunteer=[],
-    #         education=[],
-    #         awards=[],
-    #         certificates=[],
-    #         publications=[],
-    #         skills=[],
-    #         languages=[],
-    #         interests=[],
-    #         references=[],
-    #         projects=[],
-    #         meta=Meta(
-    #             canonical="https://raw.githubusercontent.com/reorx/jsoncv/master/schema/jsoncv.schema.json",
-    #             version="v2.0.0",
-    #             lastModified="2024-02-26T20:00:34+00:00Z"
-    #         )
-    #
-    #     )
-    #     data = supabase.table('personae').insert(
-    #         {
-    #             "cv_resume": app_model.personae[0].cv_resume.model_dump_json(),
-    #             "owner": user_id
-    #         }
-    #     ).execute()
-
     try:
         access_token = request.query_params.get('access_token', None)
         if access_token is not None:
