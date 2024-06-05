@@ -1,0 +1,9 @@
+workflowVersion: 1.0.0
+sources:
+    my-first-source:
+        inputs:
+            - location: ../blingua-api-python/openapi.json
+targets:
+    my-first-target:
+        target: python
+        source: my-first-source
