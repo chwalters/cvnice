@@ -141,32 +141,6 @@ class Composer:
                         self.my_jobs = []
                         logger.warning('No job openings found')
 
-                    # if self.selected_job_opening is None:
-                    #     self.selected_job_opening = self.job_db.create_job(
-                    #         user_id,
-                    #         JobOpening(
-                    #             id=-1,
-                    #             title="*Paste into job offer above for AI recognition*",
-                    #             company="",
-                    #             description="""
-                    #                         """,
-                    #             location="",
-                    #             url="http://blah",
-                    #             hiring_manager=HiringManager(
-                    #                 name="",
-                    #                 email="nobody@nobody.com",
-                    #                 phone=""
-                    #             ),
-                    #             job_type=JobType.FULL_TIME,
-                    #             work_mode=WorkMode.ONSITE,
-                    #             keywords="",
-                    #             owner=None
-                    #         )
-                    #     )
-                    #     self.my_jobs.append(self.selected_job_opening)
-                    #     if self.job_db is not None:
-                    #         self.job_db.update(self.selected_job_opening)
-
         else:
             logger.warning('No user_id to fetch job_openings for user')
 
@@ -805,27 +779,3 @@ class Composer:
         with ui.column().classes("items-center w-full q-pa-md"):
             ui.label("Job Opportunities/Leads")
             tab_content(self.composer_sections['basics'], None)
-
-        # with ui.splitter(value=20.0, on_change=splitter_changed).classes(
-        #         'w-full h-full') as splitter:
-        #     with splitter.before:
-        #         with ui.tabs().props(
-        #                 'vertical active-color="primary" indicator-color="purple" align="justify"'
-        #         ).classes(
-        #             'w-full text-primary'
-        #         ) as tabs:
-        #             for section in self.composer_sections.values():
-        #                 ui.tab(section['title'], icon=section['icon'])
-        #
-        #     with splitter.after:
-        #         with ui.tab_panels(tabs, value="Leads", on_change=lambda e: tab_changed(e)).classes(
-        #                 'w-full'
-        #         ).props(
-        #             ''
-        #         ) as tab_panels:
-        #             for section in self.composer_sections.values():
-        #                 with ui.tab_panel(section['title']) as tab_panel:
-        #                     # with ui.row().classes("w-full"):
-        #                     #     ui.button('New Job Opportunity', on_click=lambda: create_lead(app_model))
-        #                     tab_content(section, tabs)
-
