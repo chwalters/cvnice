@@ -124,7 +124,4 @@ class TemplateView:
                                 on_click=lambda e: self.delete_template(username, supabase, file.get("name")),
                             ).props("size=sm")
 
-        # with ui.html().style("overflow: auto; min-width: 100%; max-width: 100%;") as content:
-        #     content.set_content(  # height: 80vh;
-        #         f'<embed title="simple_cv.docx" src="{path}" type="application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="border: 1px solid gray; object-position: top center; height: 80vh; width: 100%;">')
-
+        
