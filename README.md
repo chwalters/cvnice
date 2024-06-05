@@ -17,7 +17,7 @@ docx (templates must be in a format supported by [carbone.io](https://carbone.io
 
 ## Why?
 
-This is a portfolio application for Chris Walters (@chwalters) and Harry Long (@harrylong96).
+This is a portfolio application for Chris Walters (@chwalters) and Harry Long (@hazzalong).
 
 Chris and Harry are developers and interested to apply new technology to showcase their 
 skills using the latest tools, including AI, for potential employers and customer contracts.
